@@ -1,3 +1,3 @@
 # mon image d'avion 
-![avion](./belle_photo_de_pigeon.png)
+![avion](./images/belle_photo_de_pigeon.png)
 
