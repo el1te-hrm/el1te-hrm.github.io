@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\hpijcke\Desktop\premier essaie\amg-master\main.cpp(105,26): warning C4293: '>>' : compteur de décalage négatif ou trop important, comportement non défini
+C:\Users\hpijcke\Desktop\premier essaie\amg-master\main.cpp(106,26): warning C4293: '>>' : compteur de décalage négatif ou trop important, comportement non défini
+  httptest.vcxproj -> C:\Users\hpijcke\Desktop\premier essaie\amg-master\Debug\amg.exe
