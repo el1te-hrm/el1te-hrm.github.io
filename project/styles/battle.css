@@ -1,0 +1,99 @@
+#battle {
+    background:
+        radial-gradient(circle at 15% 70%, #008000 0%, #008000 20%, #256225 25%, transparent 100%),
+        radial-gradient(circle at 90% 20%, #008000 0%, #008000 20%, #256225 25%, transparent 100%);
+    background-repeat: no-repeat;
+    border-radius: 1.5rem;
+}
+
+#battle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: black;
+}
+
+#battle > #battle-dialog {
+    position: absolute;
+
+    top: 70%;
+
+    width: 100%;
+    height: 30%;
+
+    border-radius: 1rem;
+
+    z-index: 10;
+
+    background-color: white;
+    border: 1px solid black;
+}
+
+#battle > #battle-dialog > ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin: 10px 0;
+
+    width: 100%;
+    list-style-type: none;
+}
+
+#battle > #battle-dialog > ul > li {
+    cursor: pointer;
+
+    box-sizing: border-box;
+    border: 1px solid black;
+
+    padding: 0 10px;
+
+    flex-basis: 50%;
+}
+
+#battle > #battle-dialog > ul > li:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#battle > .pkm {
+    position: absolute;
+    width: 25%;
+    aspect-ratio: 1;
+}
+
+#battle > #my-pkm {
+    top: 40%;
+    left: 0;
+}
+
+#battle > #opponent-pkm {
+    right: 0;
+}
+
+#battle > #exit-battle {
+    margin: 1%;
+}
+
+#battle > .pkm-name {
+    background: #607962;
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 0.25em 1em;
+    text-transform: capitalize;
+}
+
+#attack-msg {
+    margin-left: 16px;
+}
+
+.attack-animation {
+    animation: 3s attack-anim infinite; /* Infinte to add eventlistener on animation iteration on js */
+}
+
+@keyframes attack-anim {
+    0%, 100% { transform: translate(0); }
+    50% { transform: translate(200%, -100%); }
+}

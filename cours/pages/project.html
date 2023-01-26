@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cours théorique sur le Web </title>
+
+    <link rel="stylesheet" href="../utilities/theme.css">
+    
+    <style>
+        .title-name {
+            font: 700;
+            font-size: 24px;
+        }
+
+        .scroll-container > section > .content {
+            flex-basis: 90%;
+            margin: 2%;
+            margin-top: 0;
+            border-radius: 1rem;
+        }
+
+        .title-name {
+            color: var(--em-color) !important;
+        }
+
+        main {
+            counter-reset: h1-id;
+        }
+
+        section:not(.presentation) > h1 {
+            counter-increment: h1-id;
+        }
+
+        section:not(.presentation) > h1::before {
+            content: "Fonctionnalité " counter(h1-id) ". ";
+            font-weight: 800;
+            background: repeating-linear-gradient(to right, var(--em-color), var(--em-color) 86%, #7733c0 87%, #7733c0 100%);
+            filter: brightness(110%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h1 {
+            margin-bottom: 64px;
+        }
+    </style>
+</head>
+<body>
+    <a class="home" href="../index.html"> Accueil </a> 
+
+    <input type="checkbox" id="side-menu" class="menu-open" role="button">
+    <label for="side-menu" class="side-menu-btn"> 
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <ul class="menu">
+        <li><a href="#projet">Le projet</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#resumer">Ce qu'il y a à faire</a></li>
+        <li class="tab"><a href="#demarrer-console">Démarrer la console</a></li>
+        <li class="tab"><a href="#placer-sacha">Placer Sasha</a></li>
+        <li class="tab"><a href="#fight-adversaire">Placer l'adversaire</a></li>
+        <li class="tab"><a href="#reparer-fight">Réparer l'interface de combat</a></li>
+        <li class="tab"><a href="#change-carte">Changer de carte</a></li>
+        <li class="tab"><a href="#eteindre-console">Eteindre la console</a></li>
+        <li><a href="#bonus">Bonus</a></li>
+    </ul>
+
+    <main class="scroll-container">
+        <section id="projet" class="presentation">
+            <h1> Le projet </h1>
+            <p> Tu t'es donnée du mal pour arriver à cette partie, maintenant, amusons nous sur un vrai projet ! </p>
+            <p> Je te propose de continué le célèbre jeu, <span class="title-name">Point'n'mon</span>. </p>
+            <p> Tu trouveras ci-dessous la liste des éléments à implémenter dans le jeu. Tu peux les faires dans le désordre et n'oubliez pas de valider ton avancer avec les check box en haut à droite ! </p>
+            <hr/>
+        </section>
+
+        <section id="installation" class="presentation">
+            <h1> Vérifier le bon fonctionnement du projet </h1>
+            <p> Pour cela, je te laisse ouvrir le projet présent dans le dossier <span class="title-name">Point'n'mon</span> dans ton éditeur de texte favori, <em>VSCode</em>. </p>
+            <p> Une fois cela effectué, tu vas pouvoir ouvrir le fichier <em>index.html</em> dans le navigateur et écrire tes premières lignes de code dans ce dernier !</p>
+
+            <img src="../assets/arbo.png" alt="L'arborescence du projet" width="200px" style="align-self: center;"/>
+
+            <hr/>
+        </section>
+
+        <section id="resumer" class="presentation">
+            <h1> Comprendre le système du projet </h1>
+            <p> Pour implémenter de nouvelles fonctionnalités, il est important que tu comprenne ce que l'on va faire. Voici donc une courte description des fonctionnalités de Point'n'Mon. </p>
+            <ul>
+                <li> Démarrer la console </li>
+                <li> Choisir un pokémon de départ </li>
+                <li> Dialoguer avec des personnages </li>
+                <li> Lancer des combats de pokémons </li>
+                <li> Changer de cartes à l'aide de téléporteur </li>
+                <li> Arréter la console </li>
+            </ul>
+            <p> Chaque fonctionnalité est à implémenter dans le fichier <em>index.html</em> en dessous du commentaire indiquant son emplacement. Pour faciliter l'écriture du code, des commentaires son présent pour t'indiquer ou écrire ce dernier. </p>
+            <p> C'est donc le moment de commencer cette <em>folle aventure</em> ! Bon code ! </p>
+
+            <hr/>
+        </section>
+
+        <section id="demarrer-console">
+            <h1> Démarrer la console </h1>
+            <p> Actuellement, notre console ne démarre pas. Pour la faire démarer, il va falloir écrire du code javascript dans le fichier <em>index.js</em>.</p>
+            <p> Pour afficher l'écran de choix du pokémon, tu vas devoir créer une fonction javascript <em>loadPokemonChoice</em>. </p>
+            <p> Cette dernière devra supprimer la classe de style <em>hidden</em> de la balise avec l'id <em>pkm-choice</em>. </p>
+            <p> C'est maintenant à toi de jouer ! </p>
+            
+            <hr/>
+        </section>
+
+        <section id="placer-sacha">
+            <h1> Placer Sacha devant chez lui et le faire parler </h1>
+            <p> Ici l'objectif est d'ajouter un bouton représentant Sacha dans le fichier index.html. Cela nous permettra d'intéragir avec ce dernier. </p>
+            <p> Rends toi dans la section de code ayant une div avec l'id <em>0</em> et la classe <em>map</em>.</p>
+            <p> Une fois cela fait, il va falloir placer le bouton avec les classes <em>item</em> et <em>player</em> ainsi que d'appliqer du style <em>inline</em> pour placer le bouton. </p>
+            <p> A présent, tu peux le faire parler en appelant la fonction <em>openDialog</em> dans l'attribut <em>onclick</em> de la balise button représentant Sacha. Le paramètre de la fonction est la chaine de caractère à lui faire dire. </p>
+            
+            <hr/>
+        </section>
+
+        <section id="fight-adversaire">
+            <h1> Placer un adversaire pour combattre ! </h1>
+            <p> Comme pour Sacha, ajoutons un bouton représantant notre adversaire. Ce dernier devra comporter les classes <em>item</em> et <em>npc</em> ainsi que le style <em>inline</em> pour placer ce personnage (les attributs <em>position: absolute; top; left;</em>). </p>
+            <p> Une fois cela fait, il te suffit d'appeler la fonction <em>loadBattle</em> pour pouvoir se battre contre lui ! </p>
+            <hr/>
+        </section>
+
+        <section id="reparer-fight">
+            <h1> Réparer l'interface de combat </h1>
+            <p> Comme tu as pu le voir si tu as lancé un combat en cliquant sur ton adversaire, il y a un petit problème sur le placement des noms des pokémons. </p>
+            <p> On va devoir réparer tout ca avec un peu de style. En regardant dans l'html, tu pourras chercher les selecteurs dans une balise <em>div</em> ayant pour id <em>battle</em>. Tu devras trouver : </p>
+            <ul>
+                <li> La classe pkm-name</li>
+                <li> L'id my-pkm-name</li>
+                <li> L'id opponent-pkm-name</li>
+            </ul>
+            <p> Une fois ces identifiants trouvés, tu pourras les placer dans le bloc style avec les attributs <em>position: absolute; top; left;</em></p>
+            <hr/>
+        </section>
+
+        <section id="change-carte">
+            <h1> Changer de carte </h1>
+            <p> Maintenant que tu sais quasiment tout faire, tu vas pouvoir te déplacer de carte en carte ! </p>
+            <p> Pour cela, tu peux cliquer sur les téléporteur (croix noir). </p>
+            <p> Ce que tu vas faire ici, c'est ajouté une connection de la carte 1 vers la carte 10, puis de la 10 vers la carte 0. Pour ce faire : </p>
+            <ul>
+                <li> Dans la div ayant pour id <em>1</em>, ajoute un bouton avec les classes <em>item et gate</em> ensuite, il te suffit de placer les éléments avec du style <em>inline</em> comme à l'acoutumé. Pour finir, ajoute l'attribut <em>onclick</em> avec la fonction <em>loadMap(0)</em> </li>
+                <li> Dans la div ayant pour id <em>10</em>, ajoute un bouton avec les classes <em>item et gate</em> ensuite, il te suffit de placer les éléments avec du style <em>inline</em> comme à l'acoutumé. Pour finir, ajoute l'attribut <em>onclick</em> avec la fonction <em>loadMap(10)</em> </li>
+            </ul>
+
+            <hr/>
+        </section>
+
+        <section id="eteindre-console">
+            <h1> Il est temps d'éteindre la console </h1>
+            <p> Peut tu finir en cachant l'ensemble du contenu de l'écran quand l'on clique sur le bonton <em>'Stop'</em> ? Pour cela, il va falloir que la fonction appeller à l'appuie du bouton appel une fonction déjà implémenté, <em>unloadMap</em>.</p>
+            
+            <hr/>
+        </section>
+
+        <section id="bonus" class="presentation">
+            <h1> S'il te reste du temps. </h1>
+            <p> Tu peux t'amuser à implémenter une nouvelle carte avec d'autres personnages pour encore plus de fun ! </p>
+        </section>
+    </main>
+</body>
+</html>
